@@ -1,23 +1,24 @@
 services:
-  - type: web
+  - type: web_service
+    name: supplier-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    branch: main
+    autoDeploy: true
+
+  - type: web_service
     name: supplier-backend
     env: node
-    buildCommand: "cd BACKEND && npm install"
-    startCommand: "cd BACKEND && node server.js"
-    envVars:
-      - key: MONGO_URI
-        sync: false   # Render me manually add karna
+    buildCommand: npm install
+    startCommand: node index.js
+    branch: main
+    autoDeploy: true
 
-  - type: web
+  - type: web_service
     name: supplier-ml
     env: python
-    buildCommand: "cd Machine_learning && pip install -r requirements.txt"
-    startCommand: "cd Machine_learning && gunicorn app:app"
-    envVars:
-      - key: MODEL_PATH
-        sync: false   # agar tumhe ML model ka env dena hai
-
-  - type: static_site
-    name: supplier-frontend
-    buildCommand: "cd formfrontend && npm install && npm run build"
-    publishDir: "formfrontend/dist"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    branch: main
+    autoDeploy: true
