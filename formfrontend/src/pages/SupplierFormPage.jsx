@@ -1,4 +1,3 @@
-import React from 'react';
 import SupplierDataForm from '../components/SupplierDataForm';
 
 function SupplierFormPage() {

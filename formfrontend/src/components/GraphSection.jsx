@@ -79,7 +79,7 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep
               <div
                 className="w-full bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-md transition-all duration-500 hover:from-blue-600 hover:to-blue-500 cursor-pointer"
                 style={{ height: `${(data.avgScore / 100) * 100}%` }}
-                title={`${monthNames[data.month-1]}: ${data.AvgScore}%`}
+                title={`${monthNames[data.month-1]}: ${data.avgScore}%`}
               />
               <div className='grid absolute bottom-0 '>
                    <span className="flex justify-center  text-sm text-gray-600 dark:text-gray-400 mt-">

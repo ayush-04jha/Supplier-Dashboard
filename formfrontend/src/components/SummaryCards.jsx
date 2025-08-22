@@ -6,6 +6,8 @@ const SummaryCards = () => {
   useEffect(() => {
     axiosInstance.get('/summary')
       .then((res) => {
+        console.log("summary data nhi aya?",res);
+        
         setSummary(res.data); // Assuming res.data has keys: bestSupplier, worstProduct, avgScoreTrend
       })
       .catch((err) => {
