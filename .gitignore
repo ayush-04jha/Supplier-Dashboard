@@ -9,7 +9,7 @@ pnpm-debug.log*
 
 yarn.lock
 pnpm-lock.yaml
-dist/
+
 build/
 .cache/
 .env
