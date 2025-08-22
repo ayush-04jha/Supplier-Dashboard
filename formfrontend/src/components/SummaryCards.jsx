@@ -4,7 +4,7 @@ import axiosInstance from '../api/axiosInstance';
 const SummaryCards = () => {
   const [summary, setSummary] = useState(null);
   useEffect(() => {
-    console.log("axios instance?",axiosInstance);
+    console.log("axios inst?",axiosInstance);
     
     axiosInstance.get('/summary/')
       .then((res) => {
