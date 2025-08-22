@@ -12,7 +12,7 @@ const SummaryCards = () => {
        
 
     } catch (error) {
-       console.error("Error fetching summary data:", err.response ? err.response.data : err.message);
+       console.error("Error fetching summary:", err.response ? err.response.data : err.message);
     }
     }
     
