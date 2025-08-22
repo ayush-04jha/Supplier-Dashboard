@@ -16,7 +16,7 @@ const SummaryCards = () => {
     }
     }
     
-    fetchit
+    fetchit()
   }, []);
  // console.log(summary);
   if (!summary) {
