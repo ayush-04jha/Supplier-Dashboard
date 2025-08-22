@@ -6,7 +6,7 @@ const SummaryCards = () => {
   useEffect(() => {
     console.log("axios instance?",axiosInstance);
     
-    axiosInstance.get('/summary')
+    axiosInstance.get('/summary/')
       .then((res) => {
         console.log("summary data nhi aya?",res);
         
