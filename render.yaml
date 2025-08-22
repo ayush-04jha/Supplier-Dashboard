@@ -3,7 +3,7 @@ services:
   - type: web_service
     name: supplier-frontend
     env: node
-    root: formfrontend        
+    root: Supplier-Dashboard/formfrontend        
     buildCommand: npm install && npm run build
     startCommand: npx serve -s dist -l $PORT
     branch: main
