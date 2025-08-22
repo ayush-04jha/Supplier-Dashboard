@@ -13,7 +13,7 @@ const SummaryCards = () => {
         setSummary(res.data); // Assuming res.data has keys: bestSupplier, worstProduct, avgScoreTrend
       })
       .catch((err) => {
-        console.error("Error fetching summary data:", err);
+        console.error("Error fetching summary data:", err.response ? err.response.data : err.message);
       });
   }, []);
  // console.log(summary);
