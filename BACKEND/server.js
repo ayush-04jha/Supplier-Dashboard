@@ -9,7 +9,11 @@ import heatMapData from "./routes/heatMapRoutes.js";
 import cors from 'cors';
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://supplier-dashboard-frontend.onrender.com", // frontend ka URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 mongoose
