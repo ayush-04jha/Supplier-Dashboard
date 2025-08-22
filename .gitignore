@@ -1,0 +1,93 @@
+# ----------------------
+# Node.js / Backend / Frontend
+# ----------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+dist/
+build/
+.cache/
+.env
+.env.local
+.env.*.local
+
+# ----------------------
+# Python / ML
+# ----------------------
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+*.h5
+*.db
+*.sqlite3
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.ipynb_checkpoints
+
+# ----------------------
+# Datasets / Models
+# ----------------------
+*.csv
+*.tsv
+*.json
+*.xml
+*.yaml
+*.yml
+*.xls
+*.xlsx
+*.parquet
+*.feather
+*.arff
+*.joblib
+*.sav
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.weights
+
+# ----------------------
+# IDE / OS
+# ----------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# Logs
+# ----------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pip-log.txt
+
+# ----------------------
+# Test / Coverage
+# ----------------------
+coverage/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
