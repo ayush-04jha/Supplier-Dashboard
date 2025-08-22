@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Save, X } from 'lucide-react';
 import axios from 'axios';
+import axiosInstance from '../api/axiosInstance';
 
 const SupplierDataForm = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -61,7 +62,7 @@ const SupplierDataForm = () => {
     setIsSubmitting(true);
 
     try {
-      await axios.post('http://localhost:5000/api/rawdata/add', formData);
+      await axiosInstance.post('/rawdata/add', formData);
       alert('Data successfully submitted to MongoDB!');
       resetForm();
       setIsFormOpen(false);
