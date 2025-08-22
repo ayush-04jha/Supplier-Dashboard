@@ -1,12 +1,14 @@
 services:
-  - type: static_site
+  # Frontend as a Node web_service serving static files
+  - type: web_service
     name: supplier-frontend
-    env: static
+    env: node
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
+    startCommand: npx serve -s dist -l $PORT
     branch: main
     autoDeploy: true
 
+  # Backend (Express)
   - type: web_service
     name: supplier-backend
     env: node
@@ -15,6 +17,7 @@ services:
     branch: main
     autoDeploy: true
 
+  # ML backend (Flask)
   - type: web_service
     name: supplier-ml
     env: python
