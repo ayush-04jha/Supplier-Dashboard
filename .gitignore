@@ -44,7 +44,7 @@ venv.bak/
 # ----------------------
 *.csv
 *.tsv
-*.json
+
 *.xml
 
 *.yml
