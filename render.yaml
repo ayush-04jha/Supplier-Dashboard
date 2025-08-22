@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: supplier-backend
+    env: node
+    buildCommand: "cd BACKEND && npm install"
+    startCommand: "cd BACKEND && node server.js"
+    envVars:
+      - key: MONGO_URI
+        sync: false   # Render me manually add karna
+
+  - type: web
+    name: supplier-ml
+    env: python
+    buildCommand: "cd Machine_learning && pip install -r requirements.txt"
+    startCommand: "cd Machine_learning && gunicorn app:app"
+    envVars:
+      - key: MODEL_PATH
+        sync: false   # agar tumhe ML model ka env dena hai
+
+  - type: static_site
+    name: supplier-frontend
+    buildCommand: "cd formfrontend && npm install && npm run build"
+    publishDir: "formfrontend/dist"
