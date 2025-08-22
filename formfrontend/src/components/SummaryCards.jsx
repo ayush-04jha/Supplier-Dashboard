@@ -5,18 +5,16 @@ const SummaryCards = () => {
   const [summary, setSummary] = useState(null);
   useEffect(() => {
     console.log("axios instance?",axiosInstance);
-    const fetchit = async ()=>{
-      try {
-       const res = await axiosInstance.get('/summary/')
-       console.log(res.data);
-       
-
-    } catch (error) {
-       console.error("Error fetching summary:", err.response ? err.response.data : err.message);
-    }
-    }
     
-    fetchit()
+    axiosInstance.get('/summary/')
+      .then((res) => {
+        console.log("summary data nhi aya?",res);
+        
+        setSummary(res.data); // Assuming res.data has keys: bestSupplier, worstProduct, avgScoreTrend
+      })
+      .catch((err) => {
+        console.error("Error fetching summary data:", err);
+      });
   }, []);
  // console.log(summary);
   if (!summary) {
